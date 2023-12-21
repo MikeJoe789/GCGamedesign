@@ -6,32 +6,33 @@ using UnityEngine.Animations;
 
 public class contralPlayer : MonoBehaviour
 {
-    public float frocePower;
-    // public float maxPower;
+    public float moveForce = 3;
+    public float maxSpeed = 25;
     private Rigidbody myRigidbody;
-    private float horizontalMove;
-    private float verticalMove;
-    public float rotationSpeed;
-    private float verticalRotaion;
+    public GameObject child;
+    public float rotateSpeed = 1;
+    public float rotationSensitivity = 0.2f;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        frocePower=2;
-        rotationSpeed = 3;
         myRigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Mathf.Abs(Input.GetAxis("Horizontal") * frocePower);
-        verticalMove = Mathf.Abs(Input.GetAxis("Vertical") * frocePower);
-        if( horizontalMove > 0 || verticalMove>0){
-            myRigidbody.AddForce(horizontalMove,0,verticalMove);
+        if (Mathf.Abs(myRigidbody.velocity.magnitude) < maxSpeed)
+        {
+            myRigidbody.AddForce((Input.GetAxis("Horizontal") * moveForce), 0, (Input.GetAxis("Vertical") * moveForce));
         }
-        if( verticalRotaion > 0){            
-            gameObject.transform.Rotate(0f, 90.0f, 90.0f, Space.World);;
+
+        //rotation
+        Vector3 moveDirection = new Vector3(myRigidbody.velocity.x, 0, myRigidbody.velocity.z);
+        if (moveDirection.magnitude > rotationSensitivity)
+        {
+            child.transform.rotation = Quaternion.Slerp(child.transform.rotation, Quaternion.LookRotation(moveDirection), Time.deltaTime * rotateSpeed);
         }
     }
 }
