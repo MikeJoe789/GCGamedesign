@@ -12,7 +12,11 @@ public class contralPlayer : MonoBehaviour
     public GameObject child;
     public float rotateSpeed = 1;
     public float rotationSensitivity = 0.2f;
+    public Animator playerAnimator;
 
+    public float jumpForce = 100;
+    public GroundCheck groundCheck;
+    // public GameObject groundCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +38,17 @@ public class contralPlayer : MonoBehaviour
         {
             child.transform.rotation = Quaternion.Slerp(child.transform.rotation, Quaternion.LookRotation(moveDirection), Time.deltaTime * rotateSpeed);
         }
+        // jump start
+        if (Input.GetButtonDown("Jump") && groundCheck.isGround)
+        {
+            myRigidbody.AddForce(0, jumpForce, 0);
+        }
+        // jump end
+
+
+
+
+        // plaerAnimator.SetFloat("Speed", moveDirection.mag
+        playerAnimator.SetFloat("Speed", moveDirection.magnitude);
     }
 }
