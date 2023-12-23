@@ -50,5 +50,7 @@ public class contralPlayer : MonoBehaviour
 
         // plaerAnimator.SetFloat("Speed", moveDirection.mag
         playerAnimator.SetFloat("Speed", moveDirection.magnitude);
+        playerAnimator.SetFloat("vertiacalSpeed", myRigidbody.velocity.y);
+        playerAnimator.SetBool("isGround", groundCheck.isGround);
     }
 }
