@@ -223,8 +223,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7565c1663731f0e43b1cdb6808248a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frocePower: 0
-  rotationSpeed: 0
+  moveForce: 3
+  maxSpeed: 25
+  child: {fileID: 0}
+  rotateSpeed: 1
+  rotationSensitivity: 0.2
+  playerAnimator: {fileID: 0}
+  jumpForce: 100
+  groundCheck: {fileID: 0}
 --- !u!1 &728100742
 GameObject:
   m_ObjectHideFlags: 0
