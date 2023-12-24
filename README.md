@@ -11,12 +11,12 @@ Use keyboard arrow keys or 'WSAD' to control your character\
 Be careful of monsters
 
 
-These are the external resources I used for this assignment\
+These are the external resources I used for this assignment
 
 
-https://www.mixamo.com/\
+https://www.mixamo.com/
 Two Mixamo character :Aj，Warrok W Kurniawan\
-rhree Mixamo Animations : idle, walking, jumping\
+Three Mixamo Animations : idle, walking, jumping
 
 Packages:
 AI Navigation
