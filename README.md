@@ -5,10 +5,10 @@ Game Name：\
 The Lost Antidote\
 The virus was leaked due to the negligence of laboratory staff. \
 The campus is filled with all kinds of monsters, and you are accidentally infected with a serious disease. \
-Only by finding the antidote 'Dali Pill' can you detoxify.\
+Only by finding the antidote 'Dali Pill' can you detoxify.
 
 Use keyboard arrow keys or 'WSAD' to control your character\
-Be careful of monsters\
+Be careful of monsters
 
 
 These are the external resources I used for this assignment\
