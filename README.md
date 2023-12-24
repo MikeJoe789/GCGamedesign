@@ -8,7 +8,7 @@ The campus is filled with all kinds of monsters, and you are accidentally infect
 Only by finding the antidote 'Dali Pill' can you detoxify.
 
 Use keyboard arrow keys or 'WSAD' to control your character
-
+Be careful of monsters
 
 
 These are the external resources I used for this assignment
