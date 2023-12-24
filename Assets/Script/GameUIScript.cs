@@ -23,4 +23,5 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+
 }

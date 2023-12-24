@@ -21,6 +21,7 @@ public class GameManagerScript : MonoBehaviour
     void Start()
     {
         numberofSpecialForInvincibility = 1;
+        specialPickup = 0;
         specialPickups = GameObject.FindGameObjectsWithTag("SpecialPickup");
     }
 
@@ -38,8 +39,8 @@ public class GameManagerScript : MonoBehaviour
 
         if (specialPickup == numberofSpecialForInvincibility)
         {
-            yay.gameObject.SetActive(true);
-            yay.text = "yay";
+            pauseMenu.SetActive(true);
+            yay.text = "you win!!!";
             specialPickup = 0;
         }
     }
@@ -57,4 +58,10 @@ public class GameManagerScript : MonoBehaviour
         }
 
     }
+    public void AddLose()
+    {
+        pauseMenu.SetActive(true);
+        yay.text = "you lose!!!";
+    }
+
 }
