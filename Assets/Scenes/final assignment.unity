@@ -263,8 +263,8 @@ MonoBehaviour:
   moveForce: 2
   maxSpeed: 25
   child: {fileID: 2049879537}
-  rotateSpeed: 1
-  rotationSensitivity: 30
+  rotateSpeed: 5
+  rotationSensitivity: 10
   playerAnimator: {fileID: 2049879539}
   jumpForce: 100
   groundCheck: {fileID: 164506654}
