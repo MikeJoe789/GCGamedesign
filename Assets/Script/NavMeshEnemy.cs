@@ -28,6 +28,10 @@ public class NavMeshEnemy : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         detectionRadius = 10;
+        alertRadius = 20;
+        alertTimer = 50;
+        idleSpeed = 3;
+        chaseSpeed = 5;
         positionNumber = Random.Range(0, patrolPoints.Length);
         agent.SetDestination(patrolPoints[positionNumber].transform.position);
         alert = false;
